@@ -6,32 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework 10. Grid design.</title>
     <style>
-        header h1{
+        * {
+            box-sizing: border-box;
+        }
+
+        #story1 {
+            grid-area: a1;
+            background-image: url('images/1.jpg');
+        }
+
+        #story2 {
+            grid-area: a2;
+            background-image: url('images/2.jpg');
+        }
+
+        #story3 {
+            grid-area: a3;
+            background-image: url('images/3.jpg');
+        }
+
+        #story4 {
+            grid-area: a4;
+            background-image: url('images/4.jpg');
+        }
+
+        #story5 {
+            grid-area: a5;
+            background-image: url('images/5.jpg');
+        }
+
+        #story6 {
+            grid-area: a6;
+            background-image: url('images/6.jpg');
+        }
+
+        #story7 {
+            grid-area: a7;
+            background-image: url('images/7.jpg');
+        }
+
+        #story8 {
+            grid-area: a8;
+            background-image: url('images/8.jpg');
+        }
+
+        #story9 {
+            grid-area: a9;
+            background-image: url('images/9.jpg');
+        }
+
+        #story10 {
+            grid-area: a10;
+            background-image: url('images/minsk.jpg');
+        }
+
+        #story11 {
+            grid-area: a11;
+            background-image: url('images/minsk1.jpg');
+        }
+
+        #story12 {
+            grid-area: a12;
+            background-image: url('images/minsk2.jpg');
+        }
+
+        header h1 {
             text-align: center;
         }
-        
-        main {
-            display: grid;
-            grid-template-areas: "a1"
-                "a2";
-            /* grid-gap: 10px; */
-            /* padding: 10px; */
-            
+
+        header ul {
+            list-style-type: square;
         }
-        main > article{
-            width: 200px;
+
+        main {
+            /* по центру по ширине */
+            margin: auto;
+            display: grid;
+            /* max-width: 400px; */
+            grid-template-areas:
+                "a1"
+                "a2"
+                "a3"
+                "a4"
+                "a5"
+                "a6"
+                "a7"
+                "a8"
+                "a9"
+                "a10"
+                "a11"
+                "a12";
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-gap: 10px;
+            padding: 10px;
+            background-color: lightcoral;
+
+        }
+
+        main>article {
+            /* width: 200px; */
+            border-radius: 15px;
+            border: 1px solid black;
+            height: 400px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: hidden;
+
+
         }
 
         @media screen and (min-width: 600px) {
             main {
-                grid-template-areas: "a1 a2";
+                max-width: 800px;
+                grid-template-areas:
+                    "a1  a2"
+                    "a3  a4"
+                    "a5  a6"
+                    "a7  a8"
+                    "a9  a10"
+                    "a11 a12";
             }
 
         }
 
         @media screen and (min-width: 1000px) {
             main {
-                grid-template-areas: "a1 a2 a2";
+                max-width: 1400px;
+                grid-template-areas:
+                    "a1 a2 a3"
+                    "a4 a5 a6"
+                    "a7 a8 a9"
+                    "a10 a11 a12"
+                ;
             }
         }
     </style>
@@ -41,29 +152,72 @@
     <header>
         <h1>Адаптивный дизайн</h1>
         <p>Три версии сайта для экранов шириной
-            <ul>
-                <li>Меньше 600 пикселей</li>
-                <li>От 600 до 1000 пикселей</li>
-                <li>Больше 1000 пикселей</li>
-            </ul>
-            Ширина экрана сейчас: <span id="for-screen-size">0</span>px
-            <br><br>
+        <ul>
+            <li>Меньше 600 пикселей</li>
+            <li>От 600 до 1000 пикселей</li>
+            <li>Больше 1000 пикселей</li>
+        </ul>
+        Ширина экрана сейчас: <span id="for-screen-size">0</span>px
+        <br><br>
         </p>
     </header>
     <main>
-        <article id="story1" class="story" style="grid-area: a1; background-image: url('images/1.jpg');">Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Provident ad a necessitatibus sint ea architecto.</article>
+        <article id="story1" class="story">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Earum, expedita facilis nostrum consectetur doloremque ab
+            architecto quis nobis repellat sint explicabo dolores consequatur nesciunt voluptatem!</article>
         <article id="story2" class="story" style="grid-area: a2; background-image: url('images/2.jpg');">Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Eligendi nam deleniti ratione praesentium? Officiis aperiam
-            molestiae non. Nihil, vero recusandae?</article>
+            dolor sit amet consectetur adipisicing elit. Ipsa, eos voluptates asperiores voluptatem esse ipsam amet,
+            recusandae iusto sapiente ab adipisci quasi culpa corporis in! Corporis voluptatem est dolore maiores!
+            Voluptatum commodi, est nemo quidem eum facilis maiores illo sequi unde, ducimus blanditiis laborum non ipsa
+            consequuntur, explicabo magni exercitationem.
+        </article>
+        <article id="story3" class="story" style="grid-area: a3; background-image: url('images/3.jpg');">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure quaerat iste alias beatae iusto laboriosam natus quidem nostrum aspernatur
+            voluptate repudiandae saepe cupiditate quia vero rerum consequatur veniam aut vel, temporibus illum neque
+            architecto aperiam at! Quis corrupti molestiae cum eligendi amet molestias eius eos eveniet dolor
+            consequuntur eaque officia sed harum sint, quia quos minima delectus nobis. In, quia nostrum! Nesciunt quo
+            eos ut nulla molestias voluptates itaque dolorem rem sunt accusamus culpa, fugit unde? Voluptas quisquam at,
+            doloremque sed nesciunt a quod alias delectus mollitia quidem quaerat cumque laborum sunt dicta eligendi
+            repellendus corrupti officia vero accusantium dolore assumenda! Aliquam, voluptates placeat autem pariatur
+            corrupti, odio aperiam neque ducimus non blanditiis quod tenetur officiis quam, doloremque quos architecto
+            ab error repudiandae nobis accusamus eaque rem expedita similique fugiat? Rerum, quidem voluptatem? Facere
+            qui obcaecati nemo debitis?</article>
+        <article id="story4" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story5" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story6" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story7" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story8" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story9" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story10" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story11" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
+        <article id="story12" class="story">Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nemo esse quod optio quam inventore eum. Non, quis. Velit,
+            doloremque laudantium. Iure?</article>
 
     </main>
     <footer>
         Подвал сайта
     </footer>
     <script>
-        function showWidth(){
-        document.getElementById("for-screen-size").innerHTML = window.innerWidth;
+        function showWidth() {
+            document.getElementById("for-screen-size").innerHTML = window.innerWidth;
         }
 
     </script>
