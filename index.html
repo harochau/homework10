@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 10. Grid design.</title>
+    <style>
+        header h1{
+            text-align: center;
+        }
+        
+        main {
+            display: grid;
+            grid-template-areas: "a1"
+                "a2";
+            /* grid-gap: 10px; */
+            /* padding: 10px; */
+            
+        }
+        main > article{
+            width: 200px;
+        }
+
+        @media screen and (min-width: 600px) {
+            main {
+                grid-template-areas: "a1 a2";
+            }
+
+        }
+
+        @media screen and (min-width: 1000px) {
+            main {
+                grid-template-areas: "a1 a2 a2";
+            }
+        }
+    </style>
+</head>
+
+<body onload="showWidth()" onresize="showWidth()">
+    <header>
+        <h1>Адаптивный дизайн</h1>
+        <p>Три версии сайта для экранов шириной
+            <ul>
+                <li>Меньше 600 пикселей</li>
+                <li>От 600 до 1000 пикселей</li>
+                <li>Больше 1000 пикселей</li>
+            </ul>
+            Ширина экрана сейчас: <span id="for-screen-size">0</span>px
+            <br><br>
+        </p>
+    </header>
+    <main>
+        <article id="story1" class="story" style="grid-area: a1; background-image: url('images/1.jpg');">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Provident ad a necessitatibus sint ea architecto.</article>
+        <article id="story2" class="story" style="grid-area: a2; background-image: url('images/2.jpg');">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Eligendi nam deleniti ratione praesentium? Officiis aperiam
+            molestiae non. Nihil, vero recusandae?</article>
+
+    </main>
+    <footer>
+        Подвал сайта
+    </footer>
+    <script>
+        function showWidth(){
+        document.getElementById("for-screen-size").innerHTML = window.innerWidth;
+        }
+
+    </script>
+</body>
+
+</html>
