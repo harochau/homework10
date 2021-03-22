@@ -31,6 +31,7 @@
         }
 
         #story5 {
+            height: 810px;
             grid-area: a5;
             background-image: url('images/5.jpg');
         }
@@ -66,6 +67,7 @@
         }
 
         #story12 {
+            display: none;
             grid-area: a12;
             background-image: url('images/minsk2.jpg');
         }
@@ -89,13 +91,15 @@
                 "a3"
                 "a4"
                 "a5"
+                "a5"
                 "a6"
                 "a7"
                 "a8"
                 "a9"
                 "a10"
                 "a11"
-                "a12";
+                /* "a12" */
+                ;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             grid-gap: 10px;
             padding: 10px;
@@ -144,9 +148,11 @@
                     "a1  a2"
                     "a3  a4"
                     "a5  a6"
-                    "a7  a8"
-                    "a9  a10"
-                    "a11 a12";
+                    "a5  a7"
+                    "a8  a9"
+                    "a10 a11"
+                    /* "a12" */
+                    ;
             }
 
         }
@@ -157,8 +163,9 @@
                 grid-template-areas:
                     "a1 a2 a3"
                     "a4 a5 a6"
-                    "a7 a8 a9"
-                    "a10 a11 a12"
+                    "a7 a5 a8"
+                    "a9 a10 a11"
+                    /* "a12" */
                 ;
             }
         }
